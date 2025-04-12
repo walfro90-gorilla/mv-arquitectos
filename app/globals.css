@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-green: 122 139 110; /* #7A8B6E */
+    --light-beige: 227 217 198; /* #E3D9C6 */
+    --dark-green: 58 76 58; /* #3A4C3A */
+    --accent-gray: 192 198 184; /* #C0C6B8 */
+
+    --background: var(--light-beige);
+    --foreground: var(--dark-green);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--dark-green);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--dark-green);
+
+    --primary: var(--primary-green);
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: var(--light-beige);
+    --secondary-foreground: var(--dark-green);
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: var(--accent-gray);
+    --accent-foreground: var(--dark-green);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--primary-green);
+    --input: var(--primary-green);
+    --ring: var(--primary-green);
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair;
+  }
+  p,
+  span,
+  a,
+  button,
+  input,
+  textarea {
+    @apply font-sans;
+  }
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-sans {
+  font-family: var(--font-inter);
+}
+
+.bg-beige {
+  background-color: rgb(var(--light-beige));
+}
+
+.text-sage {
+  color: rgb(var(--primary-green));
+}
+
+.text-dark-green {
+  color: rgb(var(--dark-green));
+}
+
+.bg-sage {
+  background-color: rgb(var(--primary-green));
+}
+
+.bg-dark-green {
+  background-color: rgb(var(--dark-green));
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Comentar o eliminar estas clases si existen */
+/*
+.portfolio-item {
+  @apply relative overflow-hidden rounded-md;
+}
+
+.portfolio-item-overlay {
+  @apply absolute inset-0 bg-dark-green bg-opacity-0 flex flex-col justify-end p-6 transition-all duration-300 ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+  @apply bg-opacity-80;
+}
+
+.portfolio-item-title {
+  @apply transform translate-y-8 opacity-0 transition-all duration-300 ease-in-out text-white font-playfair text-xl;
+}
+
+.portfolio-item:hover .portfolio-item-title {
+  @apply translate-y-0 opacity-100;
+}
+
+.portfolio-item-category {
+  @apply transform translate-y-8 opacity-0 transition-all duration-300 ease-in-out text-white text-sm mt-1 delay-75;
+}
+
+.portfolio-item:hover .portfolio-item-category {
+  @apply translate-y-0 opacity-100;
+}
+*/
