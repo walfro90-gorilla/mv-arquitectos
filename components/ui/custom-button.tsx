@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Button, type ButtonProps } from "@/components/ui/button"
 
-interface CustomButtonProps extends ButtonProps {
+interface CustomButtonProps extends Omit<ButtonProps, "variant"> {
   variant?: "primary" | "secondary" | "outline" | "ghost"
 }
 
@@ -15,5 +15,5 @@ export function CustomButton({ className, variant = "primary", ...props }: Custo
     ghost: "text-sage hover:bg-sage/10",
   }
 
-  return <Button className={cn(baseStyles, variantStyles[variant], className)} {...props} />
+  return <Button className={cn(baseStyles, variantStyles[variant], className)} variant="default" {...props} />
 }
